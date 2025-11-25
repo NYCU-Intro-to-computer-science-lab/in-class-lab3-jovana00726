@@ -1,10 +1,16 @@
-// 題目 2：完美鋪磚計畫 (The Perfect Tiling Project) - 20分
-
 #include <iostream>
 using namespace std;
-
-int main() {
-    
-    
+int gcd (int a, int b){
+    if (b==0){
+        return a;
+    }else{
+        return gcd (b, a%b);
+    }
+}
+int main (){
+    int a;
+    int b;
+    cin >> a >> b;
+    cout << gcd(b,a%b) << endl;
     return 0;
 }
